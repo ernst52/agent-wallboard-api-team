@@ -1,8 +1,8 @@
-// utils/constants.js
+// utils/constants.js - ค่าคงที่ของระบบ
 const AGENT_STATUS = {
   AVAILABLE: 'Available',
   BUSY: 'Busy',
-  WRAP: 'Wrap',
+  WRAP: 'Wrap', 
   BREAK: 'Break',
   NOT_READY: 'Not Ready',
   OFFLINE: 'Offline'
@@ -10,12 +10,13 @@ const AGENT_STATUS = {
 
 const DEPARTMENTS = [
   'Sales',
-  'Support',
+  'Support', 
   'Technical',
   'General',
   'Supervisor'
 ];
 
+// กฎการเปลี่ยนสถานะที่อนุญาต
 const VALID_STATUS_TRANSITIONS = {
   'Available': ['Busy', 'Break', 'Not Ready', 'Offline'],
   'Busy': ['Available', 'Wrap', 'Not Ready'],
