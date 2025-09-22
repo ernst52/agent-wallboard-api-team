@@ -29,5 +29,6 @@
   "devDependencies": {
     "@types/node": "^24.5.0",
     "nodemon": "^3.0.1"
-  }
+  },
+  "license": "ISC"
 }
