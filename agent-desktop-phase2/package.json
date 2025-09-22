@@ -1,0 +1,37 @@
+{
+  "name": "agent-desktop-phase2",
+  "version": "2.0.0",
+  "description": "Agent Desktop Application for MongoDB + WebSocket API",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "dist": "electron-builder --publish=never",
+    "test-api": "node test/api-test.js"
+  },
+  "build": {
+    "appId": "com.wallboard.agent-desktop-phase2",
+    "productName": "Agent Desktop Phase 2",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "src/assets/icon.png",
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "socket.io-client": "^4.7.2"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4"
+  }
+}
